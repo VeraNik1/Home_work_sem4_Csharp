@@ -22,10 +22,22 @@ int MyPow(int A, int B){
 /*Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 452 -> 11
-
 82 -> 10
-
 9012 -> 12*/
+
+Console.WriteLine("Ввeдите натуральное число: ");
+int num = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"Сумма цифр числа {num} равна {SumDigits(num)}");
+
+int SumDigits(int number){
+    int total = 0;
+    while(number > 0){
+        total += number % 10;
+        number /= 10;
+    }
+    return total;
+}
 
 /*Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
